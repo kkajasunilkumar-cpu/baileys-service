@@ -8,9 +8,11 @@ const path = require('path');
 const pino = require('pino');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://lightslategrey-cod-160946.hostingersite.com',
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
-
 // ── State ──────────────────────────────────────────────────────────────────
 let sock = null;
 let currentQR = null;
