@@ -238,7 +238,5 @@ app.post('/abort', (req, res) => {
 
 // ── Start ──────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Baileys bulk service running on port ${PORT}`);
-  connectToWhatsApp();
+app.listen(PORT, () => { console.log(`Baileys service running on port ${PORT}`); connectToWhatsApp();
 });
